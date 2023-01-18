@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalho.Registo">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="427.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="600.0">
+               <image>
+                  <Image url="@../../../imagens/Fundo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="107.0" layoutY="125.0" prefHeight="30.0" prefWidth="92.0" text="Username" textFill="#ecab55">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="107.0" layoutY="207.0" prefHeight="30.0" prefWidth="89.0" text="Password" textFill="#ecab55">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username_Register" layoutX="217.0" layoutY="127.0" onKeyPressed="#keyPressed" promptText="Username" style="-fx-text-inner-color: #ecab55; -fx-background-color: #8a254b; -fx-border-color: #ecab55;" />
+            <PasswordField fx:id="password_Register" layoutX="217.0" layoutY="209.0" onKeyPressed="#keyPressed" promptText="Password" style="-fx-text-inner-color: #ecab55; -fx-background-color: #8a254b; -fx-border-color: #ecab55;" />
+            <Button fx:id="botao_criar_conta" layoutX="241.0" layoutY="294.0" mnemonicParsing="false" onMouseClicked="#checkRegister" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" prefHeight="25.0" prefWidth="104.0" style="-fx-text-fill: #ecab55; -fx-background-color: #8a254b; -fx-border-color: #ecab55;" text="Criar Conta" />
+            <Label fx:id="label_Register" alignment="CENTER" layoutX="133.0" layoutY="100.0" prefHeight="17.0" prefWidth="372.0" textAlignment="JUSTIFY" textFill="RED" />
+            <PasswordField fx:id="password_1_Register" layoutX="217.0" layoutY="251.0" onKeyPressed="#keyPressed" promptText="Confirmar" style="-fx-text-inner-color: #ecab55; -fx-background-color: #8a254b; -fx-border-color: #ecab55;" />
+            <Label layoutX="107.0" layoutY="165.0" text="Email" textFill="#ecab55">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="email_Register" layoutX="217.0" layoutY="165.0" onKeyPressed="#keyPressed" promptText="Email" style="-fx-text-inner-color: #ecab55; -fx-background-color: #8a254b; -fx-border-color: #ecab55;" />
+            <Text fill="#ecab55" layoutX="199.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Criar a sua conta InstaQuem">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Label fx:id="goBack_toLogin" layoutX="263.0" layoutY="336.0" onMouseClicked="#Action_goBack_toLogin" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" text="Voltar a Login" textFill="#ecab55" />
+            <ImageView fitHeight="99.0" fitWidth="159.0" layoutX="28.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imagens/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

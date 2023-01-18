@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="200.0" prefWidth="1000.0" style="-fx-background-color: #91274F;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalho.Comentario">
+   <children>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="999.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fx:id="FotoDePerfilComment" fitHeight="60.0" fitWidth="60.0" onMouseClicked="#go_to_outro_user" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></ImageView>
+            <Label fx:id="UsernameComment" contentDisplay="CENTER" onMouseClicked="#go_to_outro_user" prefHeight="60.0" prefWidth="290.0" textAlignment="CENTER" textFill="#ecab55" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fx:id="caixote" fitHeight="37.0" fitWidth="46.0" onMouseClicked="#Delete" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imagens/delete.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="520.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <TextArea fx:id="TextoDoComment" editable="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="900.0" style="-fx-control-inner-background: #8a254b; -fx-border-color: #8a254b;" styleClass="transparent" stylesheets="@../../../css/styles.css" wrapText="true">
+         <VBox.margin>
+            <Insets left="50.0" />
+         </VBox.margin></TextArea>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="52.0" prefWidth="1000.0">
+         <children>
+            <Label fx:id="likes" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="53.0" prefWidth="63.0" textFill="#ecab55">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fitHeight="33.0" fitWidth="41.0" onMouseClicked="#Liker" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imagens/thumbsup.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="5.0" top="7.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label fx:id="date" prefHeight="53.0" prefWidth="339.0" textFill="#ecab55">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="520.0" />
+               </HBox.margin></Label>
+         </children></HBox>
+   </children>
+</VBox>

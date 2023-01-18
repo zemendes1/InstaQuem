@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalho.Login_Controlador">
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="603.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="606.0" layoutX="-6.0">
+               <image>
+                  <Image url="@../../../imagens/Fundo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="102.0" layoutY="155.0" prefHeight="30.0" prefWidth="92.0" text="Username" textFill="#ecab55">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="104.0" layoutY="187.0" prefHeight="30.0" prefWidth="89.0" text="Password" textFill="#ecab55">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="205.0" layoutY="157.0" onKeyPressed="#keyPressed" promptText="Username" style="-fx-background-color: #8a254b; -fx-text-inner-color: #ecab55; -fx-border-color: #ecab55;" />
+            <PasswordField fx:id="password" layoutX="205.0" layoutY="189.0" onKeyPressed="#keyPressed" promptText="Password" style="-fx-background-color: #8a254b; -fx-text-fill: #ecab55; -fx-border-color: #ecab55;" />
+            <Button fx:id="botao_login" layoutX="229.0" layoutY="228.0" mnemonicParsing="false" onKeyPressed="#keyPressed" onMouseClicked="#userLogin" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #8a254b; -fx-text-fill: #ecab55; -fx-border-color: #ecab55;" text="Log In" textFill="#000000c2" />
+            <Label fx:id="label" alignment="CENTER" layoutX="124.0" layoutY="135.0" prefHeight="17.0" prefWidth="321.0" textAlignment="CENTER" textFill="RED" />
+            <Label fx:id="go_toCreate" layoutX="254.0" layoutY="265.0" onMouseClicked="#Action_go_toCreate" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" text="Criar Conta" textFill="#ecab55" />
+            <ImageView fitHeight="99.0" fitWidth="159.0" layoutX="235.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imagens/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

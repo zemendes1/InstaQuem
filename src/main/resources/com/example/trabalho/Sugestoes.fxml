@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalho.PaginaSugestoes">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="813.0" fitWidth="1210.0" layoutX="-10.0" layoutY="-11.0">
+               <image>
+                  <Image url="@../../../imagens/Fundo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="723.0" fitWidth="1021.0" layoutX="180.0" layoutY="80.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../imagens/teste.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imagem_da_app" fitHeight="119.0" fitWidth="201.0" layoutX="27.0" layoutY="19.0" onMouseClicked="#go_to_PaginaPrincipal" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imagens/logo.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="14.0" layoutY="150.0" prefHeight="224.0" prefWidth="149.0">
+               <children>
+                  <Text fx:id="logout_button" fill="#ecab55" layoutX="17.0" layoutY="176.0" onMouseClicked="#userLogout" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" strokeType="OUTSIDE" strokeWidth="0.0" text="LogOut" wrappingWidth="67.85205078125">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="text_meuperfil" fill="#ecab55" layoutX="17.0" layoutY="66.0" onMouseClicked="#go_to_logged_user" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" strokeType="OUTSIDE" strokeWidth="0.0" text="Meu Perfil" wrappingWidth="101.865234375">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="texto_sugestoes" fill="#ecab55" layoutX="17.0" layoutY="122.0" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" strokeType="OUTSIDE" strokeWidth="0.0" text="Sugestões">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="text_menu" fill="#ecab55" layoutX="17.0" layoutY="36.0" onMouseClicked="#go_to_PaginaPrincipal" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Inicial" wrappingWidth="128.865234375">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="texto_post" fill="#ecab55" layoutX="17.0" layoutY="149.0" onMouseClicked="#go_to_escreverposts" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" strokeType="OUTSIDE" strokeWidth="0.0" text="Fazer um Post">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="texto_amigos_s" fill="#ecab55" layoutX="17.0" layoutY="94.0" onMouseClicked="#go_to_lista_amigos" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" strokeType="OUTSIDE" strokeWidth="0.0" text="Amigos">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Line endX="-18.0" endY="1.5" layoutX="51.0" layoutY="79.0" startX="-51.0" startY="1.5" stroke="#ecab55" />
+            <Pane layoutX="929.0" layoutY="-1.0" prefHeight="81.0" prefWidth="271.0" style="-fx-background-color: #8a254b;">
+               <children>
+                  <Label fx:id="Loggedusername1" layoutX="77.0" layoutY="26.0" onMouseClicked="#go_to_logged_user" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" prefHeight="30.0" prefWidth="192.0" textAlignment="CENTER" textFill="#ecab55">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="FotoDePerfil1" fitHeight="48.5" fitWidth="45.5" layoutX="25.0" layoutY="17.0" onMouseClicked="#go_to_logged_user" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Text fill="#ecab55" layoutX="387.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adicionar novos Amigos" wrappingWidth="470.701171875">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="48.5" fitWidth="45.5" layoutX="432.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true" />
+            <TextField fx:id="SearchBar" alignment="CENTER" layoutX="464.0" layoutY="52.0" onKeyPressed="#Action_Search_Appear" onKeyReleased="#Action_Search_Appear" onKeyTyped="#Action_Search_Appear" prefHeight="59.0" prefWidth="273.0" promptText="Quem Procura?" style="-fx-text-inner-color: #ecab55; -fx-background-color: #8a254b; -fx-border-color: #ecab55; -fx-border-radius: 15; -fx-background-radius: 15;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="700.0" layoutY="65.0" onMouseClicked="#go_to_outro_user" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imagens/lupa.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="foto1" fitHeight="95.0" fitWidth="125.0" layoutX="387.0" layoutY="265.0" onMouseClicked="#go_to_outro_user_1" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="nome1" layoutX="495.0" layoutY="286.0" onMouseClicked="#go_to_outro_user_1" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" prefHeight="53.0" prefWidth="339.0" textAlignment="CENTER" textFill="#ecab55">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="foto2" fitHeight="95.0" fitWidth="125.0" layoutX="387.0" layoutY="402.0" onMouseClicked="#go_to_outro_user_2" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="nome2" layoutX="495.0" layoutY="423.0" onMouseClicked="#go_to_outro_user_2" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" prefHeight="53.0" prefWidth="353.0" textAlignment="CENTER" textFill="#ecab55">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="foto3" fitHeight="95.0" fitWidth="125.0" layoutX="387.0" layoutY="548.0" onMouseClicked="#go_to_outro_user_3" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="nome3" layoutX="495.0" layoutY="569.0" onMouseClicked="#go_to_outro_user_3" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" prefHeight="53.0" prefWidth="348.0" textAlignment="CENTER" textFill="#ecab55">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="botao1" layoutX="853.0" layoutY="290.0" mnemonicParsing="false" onMouseClicked="#EnviaPedido1" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" prefHeight="45.0" prefWidth="116.0" style="-fx-background-color: #ecab55; -fx-background-radius: 5;" text="Adicionar Amigo" textAlignment="CENTER" visible="false" />
+            <Button fx:id="botao2" layoutX="853.0" layoutY="427.0" mnemonicParsing="false" onMouseClicked="#EnviaPedido2" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" prefHeight="45.0" prefWidth="116.0" style="-fx-background-color: #ecab55; -fx-background-radius: 5;" text="Adicionar Amigo" textAlignment="CENTER" visible="false" />
+            <Button fx:id="botao3" layoutX="853.0" layoutY="573.0" mnemonicParsing="false" onMouseClicked="#EnviaPedido3" onMouseEntered="#mouse_in" onMouseExited="#mouse_in" prefHeight="45.0" prefWidth="116.0" style="-fx-background-color: #ecab55; -fx-background-radius: 5;" text="Adicionar Amigo" textAlignment="CENTER" visible="false" />
+            <Label fx:id="Mensagem_de_Erro" layoutX="475.0" layoutY="229.0" prefHeight="34.0" prefWidth="252.0" textFill="#ecab55" />
+            <ListView fx:id="SearchList" layoutX="464.0" layoutY="112.0" onMouseClicked="#go_to_outro_user" prefHeight="200.0" prefWidth="273.0" style="-fx-border-color: #ecab55; -fx-background-color: #8a254b; -fx-control-inner-background: #8a254b; -fx-text-Color: #ecab55;-fx-border-radius: 5;-fx-background-radius: 5;" visible="false" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
